@@ -7,6 +7,9 @@ const close_popup2 = document.getElementById('close-popup2')
 
 form.addEventListener('submit', onSubmit)
 
+close_popup.addEventListener('click', () => { popup.style.display = "none" })
+close_popup2.addEventListener('click', () => { popup.style.display = "none" })
+
 async function onSubmit (event) {
   event.preventDefault() // чтобы страница не перезагружалась при клике
 
@@ -20,15 +23,7 @@ async function onSubmit (event) {
     })
 
     if (result.ok) {
-      btn.onclick = function () {
-        popup.style.display = "block";
-      }
-      close_popup.onclick = function () {
-        popup.style.display = "none";
-      }
-      close_popup2.onclick = function () {
-        popup.style.display = "none";
-      }
+      popup.style.display = "block";
     }
   } catch (e) {
     // здесь показываем popup с неудачей

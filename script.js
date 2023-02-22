@@ -1,6 +1,6 @@
 function timer() {
     var nowDate = new Date();
-    var achiveDate = new Date(2023,4,31,0,0,0); //Задаем дату, к которой будет осуществляться обратный отсчет
+    var achiveDate = new Date(2023,4,31,0,0,0);
     var result = (achiveDate - nowDate)+1000;
     if (result < 0) {
         var elmnt = document.getElementById('timer');
